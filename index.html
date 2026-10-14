@@ -1,35 +1,49 @@
 <html>
-<head>
-<title> Siamo a natale? </title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<style>
-.center{
-	width:100%;
-	text-align: center;
-	font-size: 100px;
-	margin-top: 10%;
-	color:white;
-	font-family: "Mountains of Christmas", serif;
-  font-weight: 400;
-  font-style: normal;
-  text-shadow: 
-    -1px -1px 0 black,  
-     1px -1px 0 black,
-    -1px  1px 0 black,
-     1px  1px 0 black;
-}
-body{
-	    background-image: url(./sfondo2.jpg);
-    background-size: auto;
-    background-repeat: repeat-x;
-    background-position: bottom center;
-    background-color: #4C3D64;
-}
-</style>
-<body>
-<div class="center">Siamo in PIENO periodo di Natale.</div>
-</body>
+	<head>
+		<title>Siamo a natale?</title>
+		<link rel="stylesheet" href="./assets/fonts/mountains-of-christmas.css" />
+		<link rel="stylesheet" href="./assets/css/styles.css" />
+	</head>
+	<body>
+		<div class="center">Siamo in PIENO periodo di Natale.</div>
+		<div id="season-message" class="season-message" aria-live="polite"></div>
+
+		<script>
+			const seasonMessages = {
+				4: { label: "Lontanissimo Avvento", range: "(1 - 30 Aprile)" },
+				5: {
+					label: "Anticipo del Pre-Pre-Pre-Avvento",
+					range: "(1 - 31 Maggio)",
+				},
+				6: {
+					label: "Solstizio dell'Attesa Natalizia",
+					range: "(1 - 30 Giugno)",
+				},
+				7: { label: "Natale Estivo Immaginario", range: "(1 - 31 Luglio)" },
+				8: { label: "Ferragosto Anti-Avvento", range: "(1 - 31 Agosto)" },
+				9: { label: "Pre-Pre-Pre-Avvento", range: "(1 - 30 Settembre)" },
+				10: { label: "Pre-Pre-Avvento Autunnale", range: "(1 - 31 Ottobre)" },
+				11: { label: "Pre-Avvento", range: "(1 - 30 Novembre)" },
+				12: { label: "Vero Avvento", range: "(1 - 24 Dicembre)" },
+			};
+
+			const now = new Date();
+			const month = now.getMonth() + 1;
+			const day = now.getDate();
+			const message = seasonMessages[month] || {
+				label: "Tempo di preparazione natalizia",
+				range: "",
+			};
+			const messageBox = document.getElementById("season-message");
+
+			if (messageBox) {
+				if (month === 12 && day > 24) {
+					messageBox.innerHTML =
+						"<small>e più precisamente siamo nel...</small><strong>Vero Avvento</strong><span>(1 - 24 Dicembre)</span>";
+				} else {
+					messageBox.innerHTML = `<small>e più precisamente siamo nel...</small><strong>${message.label}</strong><span>${message.range}</span>`;
+				}
+			}
+		</script>
+	</body>
 </html>

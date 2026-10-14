@@ -1,0 +1,93 @@
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	min-height: 100vh;
+	margin: 0;
+	background-image: url(../../sfondo2.jpg);
+	background-size: auto;
+	background-repeat: repeat-x;
+	background-position: bottom center;
+	background-color: #4c3d64;
+}
+
+.center {
+	width: 100%;
+	text-align: center;
+	font-size: 100px;
+	margin-top: 10%;
+	color: white;
+	font-family:
+		"Mountains of Christmas", "Segoe Print", "Bradley Hand", "Comic Sans MS",
+		serif;
+	font-weight: 400;
+	font-style: normal;
+	text-shadow:
+		-1px -1px 0 black,
+		1px -1px 0 black,
+		-1px 1px 0 black,
+		1px 1px 0 black;
+}
+
+.season-message {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 4px;
+	margin-top: 24px;
+	padding: 18px 26px 16px;
+	border-radius: 14px;
+	background: rgba(249, 0, 0, 0.8);
+	border: 2px solid rgba(255, 255, 255, 0.741);
+	box-shadow:
+		0 10px 24px rgba(0, 0, 0, 0.2),
+		inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+	color: #fff;
+	text-align: center;
+	font-family:
+		"Mountains of Christmas", "Segoe Print", "Bradley Hand", "Comic Sans MS",
+		serif;
+}
+
+.season-message small {
+	display: block;
+	font-size: 20px;
+	letter-spacing: 0.03em;
+	opacity: 0.9;
+	color: #fff;
+	text-transform: none;
+	font-family:
+		"Mountains of Christmas", "Segoe Print", "Bradley Hand", "Comic Sans MS",
+		serif;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+.season-message strong {
+	font-size: 34px;
+	line-height: 1.1;
+	font-weight: 700;
+	color: #fff;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000,
+		2px 3px 0 rgba(0, 0, 0, 0.22);
+}
+
+.season-message span {
+	font-size: 18px;
+	letter-spacing: 0.02em;
+	opacity: 0.98;
+	color: #fff;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}

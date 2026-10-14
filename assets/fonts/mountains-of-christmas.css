@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Mountains of Christmas';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./mountains-of-christmas-regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Mountains of Christmas';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./mountains-of-christmas-bold.ttf') format('truetype');
+}
